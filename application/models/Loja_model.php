@@ -101,10 +101,6 @@ public function get_categorias_filhas($categorias_pai_id = NULL){
 
   	    return $this->db->get('produtos')->result();
 
-
-
-
-
   }
 
 }

@@ -1,14 +1,11 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-	class Produtos_model extends CI_Model{
-
-
-    //Utilizado na area restrita 
+	 class Produtos_model extends CI_Model{
+      //Utilizado na area restrita 
 		public function get_all(){
 
 			$this->db->select([
-
 				'produtos.produto_id',
 				'produtos.produto_codigo',
 				'produtos.produto_nome',
@@ -21,13 +18,9 @@
 
 			$this->db->join('categorias', 'categorias.categoria_id = produtos.produto_categoria_id', 'LEFT');
 			$this->db->join('marcas','marcas.marca_id = produtos.produto_marca_id', 'LEFT');
-
 			return $this->db->get('produtos')->result();
-
 		}
-
 		//Recupera para detalhar na area externas do site
-
 		public function get_by_id($produto_meta_link = NULL){
 
 				$this->db->select([
@@ -47,18 +40,11 @@
 				'marcas.marca_nome',
 				'marcas.marca_meta_link',
 			]);
-
-
     $this->db->where('produtos.produto_meta_link', $produto_meta_link);
-
     $this->db->join('marcas', 'marcas.marca_id = produtos.produto_marca_id');
     $this->db->join('categorias', 'categorias.categoria_id = produtos.produto_categoria_id');
     $this->db->join('categorias_pai', 'categorias_pai.categoria_pai_id = categorias.categoria_pai_id');
-
     return $this->db->get('produtos')->row();
-
-
-
 		}
 
     public function get_all_bay($condicoes = NULL){
@@ -80,7 +66,7 @@
 				
 			}
 
-$this->db->join('categorias','categorias.categoria_id = produtos.produto_categoria_id', 'LEFT');
+	$this->db->join('categorias','categorias.categoria_id = produtos.produto_categoria_id', 'LEFT');
 
     $this->db->join('marcas','marcas.marca_id = produtos.produto_marca_id', 'LEFT');
     
@@ -91,56 +77,34 @@ $this->db->join('categorias','categorias.categoria_id = produtos.produto_categor
     //Retorna uma foto por registro
     //$this->db->group_by('produtos.produto_id');
     $this->db->DISTINCT('produtos.produto_id');
-
-
     return $this->db->get('produtos')->result();
-
-
 	}
-
-
-//Fazer busca no site sobre nome e categoria //
-
+	//Fazer busca no site sobre nome e categoria //
 	public function get_all_by_busca($busca = NULL){
-
 		if ($busca) {
-
 	$this->db->select([
 				'produtos.produto_nome',
 				'produtos.produto_valor',
 				'produtos.produto_meta_link',
-				'categorias_pai.categoria_pai_nome',
-				
+				'categorias_pai.categoria_pai_nome',				
 				'categorias.categoria_nome',
 				'produtos_fotos.foto_caminho',
 				
 			]);
-
 	      //ver se o produto estar ativo //
-
           $this->db->where('produtos.produto_ativo', 1);	
-
          /// implementa a busca uasando like e procura pelo produto//
-
           $this->db->like('produtos.produto_nome', $busca, 'BOTH');
-
 			         //
 				$this->db->join('categorias','categorias.categoria_id = produtos.produto_categoria_id', 'LEFT');
-
-			    $this->db->join('marcas','marcas.marca_id = produtos.produto_marca_id', 'LEFT');
-			    
+			    $this->db->join('marcas','marcas.marca_id = produtos.produto_marca_id', 'LEFT');			    
 			    $this->db->join('categorias_pai','categorias_pai.categoria_pai_id = categorias.categoria_pai_id', 'LEFT');
-
 			    $this->db->join('produtos_fotos','produtos_fotos.foto_produto_id = produtos.produto_id','LEFT');
-
 			       //Retorna uma foto por registro
 			    $this->db->group_by('produtos.produto_id');
-
 			    return $this->db->get('produtos')->result();
-       
-			
-		}else{
-
+		    }else{
+		    	
 			return false;
 		}
 

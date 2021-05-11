@@ -92,7 +92,6 @@ http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?nCdEmpresa=08082650&sDs
 	$url_correios .= '&nCdFormato=1';
 	$url_correios .= '&nVlComprimento='. $produto->produto_comprimento;
 	$url_correios .= '&nVlAltura='. $produto->produto_altura;
-	$url_correios .= '&nVlAltura='. $produto->produto_altura;
 	$url_correios .= '&nVlLargura='. $produto->produto_largura;
 	$url_correios .= '&sCdMaoPropria=n';
 	$url_correios .= '&nVlValorDeclarado=0'. $config_correios->config_valor_declarado;

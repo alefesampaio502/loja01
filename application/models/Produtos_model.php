@@ -89,7 +89,8 @@ $this->db->join('categorias','categorias.categoria_id = produtos.produto_categor
     $this->db->join('produtos_fotos','produtos_fotos.foto_produto_id = produtos.produto_id','LEFT');
 
     //Retorna uma foto por registro
-    $this->db->group_by('produtos.produto_id');
+    //$this->db->group_by('produtos.produto_id');
+    $this->db->DISTINCT('produtos.produto_id');
 
 
     return $this->db->get('produtos')->result();

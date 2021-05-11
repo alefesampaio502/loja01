@@ -16,7 +16,7 @@ var calcula_frete = function(){
 
 
 			type: 'post',
-			url: BASE_URL + 'ajax/',
+			url: BASE_URL + 'ajax/index',
 			dataType: 'json',
 
 			data:{
@@ -25,7 +25,13 @@ var calcula_frete = function(){
 			}
 		}).then(function(response){
 
-			alert(response);
+			//if(response.erro == 0) {
+
+				$('#retorno-frete').html(response.retorno_endereco);
+
+			//}
+
+			//console.log(response);
 
 
 		});

@@ -21,8 +21,9 @@ public function get_grandes_marcas(){
 
   $this->db->join('produtos', 'produtos.produto_marca_id = marcas.marca_id');
 
-  $this->db->group_by('marca_nome');
+ // $this->db->group_by('marca_nome');
 
+$this->db->DISTINCT('marca_nome');
   return $this->db->get('marcas')->result(); 
 
 
@@ -43,7 +44,8 @@ public function get_categorias_pai(){
 
 	//Retoorna  produtos com categoria ativa//,
 	$this->db->join('produtos', 'produtos.produto_categoria_id = categorias.categoria_id');
-	$this->db->group_by('categorias_pai.categoria_pai_nome');
+	//$this->db->group_by('categorias_pai.categoria_pai_nome');
+	$this->db->DISTINCT('categorias_pai.categoria_pai_nome');
 
 	return $this->db->get('categorias_pai')->result();
 
@@ -64,7 +66,8 @@ public function get_categorias_filhas($categorias_pai_id = NULL){
 	//Retoorna  produtos com categoria ativa//,
 	$this->db->join('produtos', 'produtos.produto_categoria_id = categorias.categoria_id');
 
-	$this->db->group_by('categorias.categoria_nome');
+	//$this->db->group_by('categorias.categoria_nome');
+	//$this->db->DISTINCT('categorias.categoria_nome');
 
 	return $this->db->get('categorias')->result();
 
@@ -92,7 +95,9 @@ public function get_categorias_filhas($categorias_pai_id = NULL){
 
   	    $this->db->limit($num_produtos_destaques);
 
-  	    $this->db->group_by('produtos.produto_id');
+  	    //$this->db->group_by('produtos.produto_id');
+
+  	    $this->db->DISTINCT('produtos.produto_id');
 
   	    return $this->db->get('produtos')->result();
 

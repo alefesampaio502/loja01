@@ -85,13 +85,17 @@
 
 
                                             <div class="quantity">
-                                                <label>Calcular frete e prazo de entrega</label>
+                                        <label>Calcular frete e prazo de entrega</label>
                                                 <div class="" style="min-width:140px; float: left; margin-right: 10px; position: relative; text-align:left">
                                                     <input type="text" id="cep" name="cep" class="cart-plus-minus-box cep" placeholder="Informe seu CEP">
                                                     
                                                 </div>
                                             </div>
-                                            <button type="button" id="btn-calcula-frete" name="produto_id" data-id="<?php echo $produto->produto_id; ?>" class="add-to-cart bg-info" style="padding: 12px 20px">Calcular</button>
+         <button type="button" id="btn-calcula-frete" name="produto_id" data-id="<?php echo $produto->produto_id; ?>" class="add-to-cart bg-info" style="padding: 12px 20px">Calcular</button>
+
+         <div class="pt-10 text-info" id="retorno-frete">
+            
+         </div>
 
                                         <?php echo form_close();?>
                                     </div>

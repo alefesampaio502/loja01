@@ -5,14 +5,17 @@ Loja virtual completa em Codeigniter 3 com o intermediador de pagamentos Pagsegu
 Sistema de loja virtual feito com codeigniter
 
 *******************
-Infomações
+Infomações:
 *******************
 
 O que é o Sandbox do Pagseguro?
 
 
     Segundo o que consta da página do Pagseguro Sandbox, O PagSeguro Sandbox é um ambiente de teste que deve ser usado para você integrar e testar os processos de interação entre o seu sistema e o PagSeguro. Nenhuma das transações realizadas nesse ambiente tem valor monetário e nele é possível simular diversas alterações de estado das transações.
-		Para quem é este Sistema:
+    *******************
+Para quem é este Sistema:
+*******************
+		
 		Desenvolvedores web que apreciem desenvolvimento de sistemas web seguros e robustos em linguagem PHP. Desenvolvedores PHP em geral e pessoas que queiram conhecer o framework Codeigniter.
 Resources
 *********

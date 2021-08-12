@@ -1,5 +1,5 @@
 ###################
-loja virtual completa em Codeigniter 3 com o intermediador de pagamentos Pagseguro no ambiente Sandbox
+Loja virtual completa em Codeigniter 3 com o intermediador de pagamentos Pagseguro no ambiente Sandbox
 ###################
 
 Sistema de loja virtual feito com codeigniter

@@ -1,49 +1,19 @@
 ###################
-What is CodeIgniter
+loja virtual completa em Codeigniter 3 com o intermediador de pagamentos Pagseguro no ambiente Sandbox
 ###################
 
 Sistema de loja virtual feito com codeigniter
 
 *******************
-Release Information
+Infomações
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+O que é o Sandbox do Pagseguro?
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
-
-*******************
-Server Requirements
-*******************
-
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
+    Segundo o que consta da página do Pagseguro Sandbox, O PagSeguro Sandbox é um ambiente de teste que deve ser usado para você integrar e testar os processos de interação entre o seu sistema e o PagSeguro. Nenhuma das transações realizadas nesse ambiente tem valor monetário e nele é possível simular diversas alterações de estado das transações.
+		Para quem é este Sistema:
+		Desenvolvedores web que apreciem desenvolvimento de sistemas web seguros e robustos em linguagem PHP. Desenvolvedores PHP em geral e pessoas que queiram conhecer o framework Codeigniter.
 Resources
 *********
 
